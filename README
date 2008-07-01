@@ -4,17 +4,17 @@ FileZilla Client is a fast and reliable cross-platform FTP, FTPS and
 SFTP client with lots of useful features and an intuitive interface.
 
 Runtime requirements:
-  cygwin-1.5.25-11
+  cygwin-1.5.25-15
   libgnutls26-2.2.2-1
-  wx28-base-2.8.7-1
-  wx28-gtk2-2.8.7-1
+  wx28-base-2.8.8.0-1
+  wx28-gtk2-2.8.8.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
   binutils-20060817-1
-  cygport-0.3.10-1
+  cygport-0.3.11-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -32,15 +32,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack filezilla-3.0.10-X-src.tar.bz2
+  unpack filezilla-3.0.11-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./filezilla-3.0.10-X.cygport all
+  cygport ./filezilla-3.0.11-X.cygport all
 
 This will create:
-  /usr/src/filezilla-3.0.10-X-src.tar.bz2
-  /usr/src/filezilla-3.0.10-X.tar.bz2
+  /usr/src/filezilla-3.0.11-X-src.tar.bz2
+  /usr/src/filezilla-3.0.11-X.tar.bz2
 
 -------------------------------------------
 
@@ -50,12 +50,12 @@ Files included in the binary package:
   /usr/bin/fzputtygen.exe
   /usr/bin/fzsftp.exe
   /usr/share/applications/filezilla.desktop
-  /usr/share/doc/filezilla-3.0.10/AUTHORS
-  /usr/share/doc/filezilla-3.0.10/COPYING
-  /usr/share/doc/filezilla-3.0.10/ChangeLog
-  /usr/share/doc/filezilla-3.0.10/INSTALL
-  /usr/share/doc/filezilla-3.0.10/NEWS
-  /usr/share/doc/filezilla-3.0.10/README
+  /usr/share/doc/filezilla-3.0.11/AUTHORS
+  /usr/share/doc/filezilla-3.0.11/COPYING
+  /usr/share/doc/filezilla-3.0.11/ChangeLog
+  /usr/share/doc/filezilla-3.0.11/INSTALL
+  /usr/share/doc/filezilla-3.0.11/NEWS
+  /usr/share/doc/filezilla-3.0.11/README
   /usr/share/filezilla/docs/fzdefaults.xml.example
   /usr/share/filezilla/resources/16x16/ascii.png
   /usr/share/filezilla/resources/16x16/auto.png
@@ -273,6 +273,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 3.0.11-1 -----
+Version bump.
 
 ----- version 3.0.10-1 -----
 Initial release for Cygwin.
