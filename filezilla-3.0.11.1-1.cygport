@@ -1,0 +1,9 @@
+WX_VERSION=2.8
+inherit wxwidgets
+
+DESCRIPTION="FileZilla FTP/FTPS/SFTP client"
+HOMEPAGE="http://filezilla-project.org/"
+SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
+SRC_DIR="${P/_/-}"
+
+CYGCONF_ARGS+=" WXRC=/usr/bin/wxrc-${WX_VERSION}"
