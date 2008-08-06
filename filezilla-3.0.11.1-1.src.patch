@@ -1,4 +1,3 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/configure.in src/filezilla-3.0.11.1/configure.in
 --- origsrc/filezilla-3.0.11.1/configure.in	2008-07-05 09:09:37.000000000 -0500
 +++ src/filezilla-3.0.11.1/configure.in	2008-07-16 21:37:15.765625000 -0500
 @@ -239,26 +239,7 @@
@@ -29,7 +28,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x
  
    # Binreloc
    # --------
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/src/interface/Makefile.am src/filezilla-3.0.11.1/src/interface/Makefile.am
 --- origsrc/filezilla-3.0.11.1/src/interface/Makefile.am	2008-07-05 09:09:39.000000000 -0500
 +++ src/filezilla-3.0.11.1/src/interface/Makefile.am	2008-07-16 21:37:15.781250000 -0500
 @@ -180,15 +180,15 @@
@@ -51,7 +49,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x
  
  if MINGW
  filezilla_LDFLAGS += -lole32 -luuid -lnetapi32
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/src/interface/commandqueue.h src/filezilla-3.0.11.1/src/interface/commandqueue.h
 --- origsrc/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-05 09:09:38.000000000 -0500
 +++ src/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-16 21:37:15.796875000 -0500
 @@ -5,7 +5,7 @@
@@ -63,7 +60,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x
  
  class CCommandQueue
  {
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/src/interface/filelistctrl.cpp src/filezilla-3.0.11.1/src/interface/filelistctrl.cpp
 --- origsrc/filezilla-3.0.11.1/src/interface/filelistctrl.cpp	2008-07-05 09:09:39.000000000 -0500
 +++ src/filezilla-3.0.11.1/src/interface/filelistctrl.cpp	2008-07-16 21:37:15.812500000 -0500
 @@ -10,8 +10,8 @@
@@ -77,7 +73,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x
  #ifndef FILELISTCTRL_INCLUDE_TEMPLATE_DEFINITION
  DEFINE_EVENT_TYPE(fz_EVT_FILELIST_FOCUSCHANGE)
  DEFINE_EVENT_TYPE(fz_EVT_DEFERRED_MOUSEEVENT)
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/src/interface/locale_initializer.cpp src/filezilla-3.0.11.1/src/interface/locale_initializer.cpp
 --- origsrc/filezilla-3.0.11.1/src/interface/locale_initializer.cpp	2008-07-05 09:09:38.000000000 -0500
 +++ src/filezilla-3.0.11.1/src/interface/locale_initializer.cpp	2008-07-16 21:37:15.828125000 -0500
 @@ -174,12 +174,14 @@
@@ -95,7 +90,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x
  
  	std::string path = mkstr(getenv("PATH"));
  	while (!path.empty())
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4~' -x aclocal.m4t -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x '*config.h.in' -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x libtool.m4 -x ltoptions.m4 -x ltsugar.m4 -x ltversion.m4 -x 'lt~obsolete.m4' -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x config.rpath -x aclocal.m4 -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/filezilla-3.0.11.1/tests/Makefile.am src/filezilla-3.0.11.1/tests/Makefile.am
 --- origsrc/filezilla-3.0.11.1/tests/Makefile.am	2008-07-05 09:09:37.000000000 -0500
 +++ src/filezilla-3.0.11.1/tests/Makefile.am	2008-07-16 21:37:15.843750000 -0500
 @@ -9,12 +9,12 @@
