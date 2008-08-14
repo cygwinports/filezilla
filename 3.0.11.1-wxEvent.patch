@@ -1,0 +1,24 @@
+--- origsrc/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-05 09:09:38.000000000 -0500
++++ src/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-16 21:37:15.796875000 -0500
+@@ -5,7 +5,7 @@
+ class CNotification;
+ class CMainFrame;
+ 
+-DECLARE_EVENT_TYPE(fzEVT_GRANTEXCLUSIVEENGINEACCESS, -1)
++DECLARE_LOCAL_EVENT_TYPE(fzEVT_GRANTEXCLUSIVEENGINEACCESS, -1)
+ 
+ class CCommandQueue
+ {
+--- origsrc/filezilla-3.0.11.1/src/interface/filelistctrl.cpp	2008-07-05 09:09:39.000000000 -0500
++++ src/filezilla-3.0.11.1/src/interface/filelistctrl.cpp	2008-07-16 21:37:15.812500000 -0500
+@@ -10,8 +10,8 @@
+ #include "filelist_statusbar.h"
+ 
+ #ifndef __WXMSW__
+-DECLARE_EVENT_TYPE(fz_EVT_FILELIST_FOCUSCHANGE, -1)
+-DECLARE_EVENT_TYPE(fz_EVT_DEFERRED_MOUSEEVENT, -1)
++DECLARE_LOCAL_EVENT_TYPE(fz_EVT_FILELIST_FOCUSCHANGE, -1)
++DECLARE_LOCAL_EVENT_TYPE(fz_EVT_DEFERRED_MOUSEEVENT, -1)
+ #ifndef FILELISTCTRL_INCLUDE_TEMPLATE_DEFINITION
+ DEFINE_EVENT_TYPE(fz_EVT_FILELIST_FOCUSCHANGE)
+ DEFINE_EVENT_TYPE(fz_EVT_DEFERRED_MOUSEEVENT)

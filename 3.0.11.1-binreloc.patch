@@ -1,0 +1,17 @@
+--- origsrc/filezilla-3.0.11.1/src/interface/locale_initializer.cpp	2008-07-05 09:09:38.000000000 -0500
++++ src/filezilla-3.0.11.1/src/interface/locale_initializer.cpp	2008-07-16 21:37:15.828125000 -0500
+@@ -174,12 +174,14 @@
+ 		return file;
+ 
+ 
++#ifdef ENABLE_BINRELOC
+ 	file = CheckPathForDefaults(mkstr(SELFPATH), 2, "share/filezilla/fzdefaults.xml");
+ 	if (!file.empty())
+ 		return file;
+ 	file = CheckPathForDefaults(mkstr(DATADIR), 0, "filezilla/fzdefaults.xml");
+ 	if (!file.empty())
+ 		return file;
++#endif
+ 
+ 	std::string path = mkstr(getenv("PATH"));
+ 	while (!path.empty())

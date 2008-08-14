@@ -5,7 +5,9 @@ SFTP client with lots of useful features and an intuitive interface.
 
 Runtime requirements:
   cygwin-1.5.25-15
+  libgetaddrinfo0-1.6.3-3
   libgnutls26-2.2.2-1
+  libidn11-1.7-1
   wx28-base-2.8.8.0-1
   wx28-gtk2-2.8.8.0-1
 
@@ -32,30 +34,31 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack filezilla-3.0.11.1-X-src.tar.bz2
+  unpack filezilla-3.1.1.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./filezilla-3.0.11.1-X.cygport all
+  cygport ./filezilla-3.1.1.1-X.cygport all
 
 This will create:
-  /usr/src/filezilla-3.0.11.1-X-src.tar.bz2
-  /usr/src/filezilla-3.0.11.1-X.tar.bz2
+  /usr/src/filezilla-3.1.1.1-X-src.tar.bz2
+  /usr/src/filezilla-3.1.1.1-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+  /etc/postinstall/filezilla.sh
   /usr/bin/filezilla.exe
   /usr/bin/fzputtygen.exe
   /usr/bin/fzsftp.exe
   /usr/share/applications/filezilla.desktop
-  /usr/share/doc/filezilla-3.0.11.1/AUTHORS
-  /usr/share/doc/filezilla-3.0.11.1/COPYING
-  /usr/share/doc/filezilla-3.0.11.1/ChangeLog
-  /usr/share/doc/filezilla-3.0.11.1/INSTALL
-  /usr/share/doc/filezilla-3.0.11.1/NEWS
-  /usr/share/doc/filezilla-3.0.11.1/README
+  /usr/share/doc/filezilla-3.1.1.1/AUTHORS
+  /usr/share/doc/filezilla-3.1.1.1/COPYING
+  /usr/share/doc/filezilla-3.1.1.1/ChangeLog
+  /usr/share/doc/filezilla-3.1.1.1/INSTALL
+  /usr/share/doc/filezilla-3.1.1.1/NEWS
+  /usr/share/doc/filezilla-3.1.1.1/README
   /usr/share/filezilla/docs/fzdefaults.xml.example
   /usr/share/filezilla/resources/16x16/ascii.png
   /usr/share/filezilla/resources/16x16/auto.png
@@ -212,15 +215,201 @@ Files included in the binary package:
   /usr/share/filezilla/resources/dialogs.xrc
   /usr/share/filezilla/resources/down.png
   /usr/share/filezilla/resources/dropdown.png
-  /usr/share/filezilla/resources/empty.png
   /usr/share/filezilla/resources/finished.wav
   /usr/share/filezilla/resources/leds.png
+  /usr/share/filezilla/resources/lone/16x16/ascii.png
+  /usr/share/filezilla/resources/lone/16x16/auto.png
+  /usr/share/filezilla/resources/lone/16x16/binary.png
+  /usr/share/filezilla/resources/lone/16x16/bookmarks.png
+  /usr/share/filezilla/resources/lone/16x16/cancel.png
+  /usr/share/filezilla/resources/lone/16x16/compare.png
+  /usr/share/filezilla/resources/lone/16x16/disconnect.png
+  /usr/share/filezilla/resources/lone/16x16/download.png
+  /usr/share/filezilla/resources/lone/16x16/downloadadd.png
+  /usr/share/filezilla/resources/lone/16x16/file.png
+  /usr/share/filezilla/resources/lone/16x16/filter.png
+  /usr/share/filezilla/resources/lone/16x16/folder.png
+  /usr/share/filezilla/resources/lone/16x16/folderback.png
+  /usr/share/filezilla/resources/lone/16x16/folderclosed.png
+  /usr/share/filezilla/resources/lone/16x16/folderup.png
+  /usr/share/filezilla/resources/lone/16x16/help.png
+  /usr/share/filezilla/resources/lone/16x16/localtreeview.png
+  /usr/share/filezilla/resources/lone/16x16/lock.png
+  /usr/share/filezilla/resources/lone/16x16/logview.png
+  /usr/share/filezilla/resources/lone/16x16/processqueue.png
+  /usr/share/filezilla/resources/lone/16x16/queueview.png
+  /usr/share/filezilla/resources/lone/16x16/reconnect.png
+  /usr/share/filezilla/resources/lone/16x16/refresh.png
+  /usr/share/filezilla/resources/lone/16x16/remotetreeview.png
+  /usr/share/filezilla/resources/lone/16x16/server.png
+  /usr/share/filezilla/resources/lone/16x16/showhidden.png
+  /usr/share/filezilla/resources/lone/16x16/sitemanager.png
+  /usr/share/filezilla/resources/lone/16x16/speedlimits.png
+  /usr/share/filezilla/resources/lone/16x16/synchronize.png
+  /usr/share/filezilla/resources/lone/16x16/upload.png
+  /usr/share/filezilla/resources/lone/16x16/uploadadd.png
+  /usr/share/filezilla/resources/lone/32x32/ascii.png
+  /usr/share/filezilla/resources/lone/32x32/auto.png
+  /usr/share/filezilla/resources/lone/32x32/binary.png
+  /usr/share/filezilla/resources/lone/32x32/bookmarks.png
+  /usr/share/filezilla/resources/lone/32x32/cancel.png
+  /usr/share/filezilla/resources/lone/32x32/compare.png
+  /usr/share/filezilla/resources/lone/32x32/disconnect.png
+  /usr/share/filezilla/resources/lone/32x32/download.png
+  /usr/share/filezilla/resources/lone/32x32/downloadadd.png
+  /usr/share/filezilla/resources/lone/32x32/file.png
+  /usr/share/filezilla/resources/lone/32x32/filter.png
+  /usr/share/filezilla/resources/lone/32x32/folder.png
+  /usr/share/filezilla/resources/lone/32x32/folderback.png
+  /usr/share/filezilla/resources/lone/32x32/folderclosed.png
+  /usr/share/filezilla/resources/lone/32x32/folderup.png
+  /usr/share/filezilla/resources/lone/32x32/help.png
+  /usr/share/filezilla/resources/lone/32x32/localtreeview.png
+  /usr/share/filezilla/resources/lone/32x32/lock.png
+  /usr/share/filezilla/resources/lone/32x32/logview.png
+  /usr/share/filezilla/resources/lone/32x32/processqueue.png
+  /usr/share/filezilla/resources/lone/32x32/queueview.png
+  /usr/share/filezilla/resources/lone/32x32/reconnect.png
+  /usr/share/filezilla/resources/lone/32x32/refresh.png
+  /usr/share/filezilla/resources/lone/32x32/remotetreeview.png
+  /usr/share/filezilla/resources/lone/32x32/showhidden.png
+  /usr/share/filezilla/resources/lone/32x32/sitemanager.png
+  /usr/share/filezilla/resources/lone/32x32/speedlimits.png
+  /usr/share/filezilla/resources/lone/32x32/synchronize.png
+  /usr/share/filezilla/resources/lone/32x32/upload.png
+  /usr/share/filezilla/resources/lone/32x32/uploadadd.png
+  /usr/share/filezilla/resources/lone/48x48/ascii.png
+  /usr/share/filezilla/resources/lone/48x48/auto.png
+  /usr/share/filezilla/resources/lone/48x48/binary.png
+  /usr/share/filezilla/resources/lone/48x48/bookmarks.png
+  /usr/share/filezilla/resources/lone/48x48/cancel.png
+  /usr/share/filezilla/resources/lone/48x48/compare.png
+  /usr/share/filezilla/resources/lone/48x48/disconnect.png
+  /usr/share/filezilla/resources/lone/48x48/download.png
+  /usr/share/filezilla/resources/lone/48x48/downloadadd.png
+  /usr/share/filezilla/resources/lone/48x48/file.png
+  /usr/share/filezilla/resources/lone/48x48/filter.png
+  /usr/share/filezilla/resources/lone/48x48/folder.png
+  /usr/share/filezilla/resources/lone/48x48/folderback.png
+  /usr/share/filezilla/resources/lone/48x48/folderclosed.png
+  /usr/share/filezilla/resources/lone/48x48/folderup.png
+  /usr/share/filezilla/resources/lone/48x48/help.png
+  /usr/share/filezilla/resources/lone/48x48/localtreeview.png
+  /usr/share/filezilla/resources/lone/48x48/lock.png
+  /usr/share/filezilla/resources/lone/48x48/logview.png
+  /usr/share/filezilla/resources/lone/48x48/processqueue.png
+  /usr/share/filezilla/resources/lone/48x48/queueview.png
+  /usr/share/filezilla/resources/lone/48x48/reconnect.png
+  /usr/share/filezilla/resources/lone/48x48/refresh.png
+  /usr/share/filezilla/resources/lone/48x48/remotetreeview.png
+  /usr/share/filezilla/resources/lone/48x48/showhidden.png
+  /usr/share/filezilla/resources/lone/48x48/sitemanager.png
+  /usr/share/filezilla/resources/lone/48x48/speedlimits.png
+  /usr/share/filezilla/resources/lone/48x48/synchronize.png
+  /usr/share/filezilla/resources/lone/48x48/upload.png
+  /usr/share/filezilla/resources/lone/48x48/uploadadd.png
+  /usr/share/filezilla/resources/lone/theme.xml
   /usr/share/filezilla/resources/menus.xrc
   /usr/share/filezilla/resources/netconfwizard.xrc
+  /usr/share/filezilla/resources/opencrystal/16x16/ascii.png
+  /usr/share/filezilla/resources/opencrystal/16x16/auto.png
+  /usr/share/filezilla/resources/opencrystal/16x16/binary.png
+  /usr/share/filezilla/resources/opencrystal/16x16/bookmarks.png
+  /usr/share/filezilla/resources/opencrystal/16x16/cancel.png
+  /usr/share/filezilla/resources/opencrystal/16x16/compare.png
+  /usr/share/filezilla/resources/opencrystal/16x16/disconnect.png
+  /usr/share/filezilla/resources/opencrystal/16x16/download.png
+  /usr/share/filezilla/resources/opencrystal/16x16/downloadadd.png
+  /usr/share/filezilla/resources/opencrystal/16x16/file.png
+  /usr/share/filezilla/resources/opencrystal/16x16/filter.png
+  /usr/share/filezilla/resources/opencrystal/16x16/folder.png
+  /usr/share/filezilla/resources/opencrystal/16x16/folderback.png
+  /usr/share/filezilla/resources/opencrystal/16x16/folderclosed.png
+  /usr/share/filezilla/resources/opencrystal/16x16/folderup.png
+  /usr/share/filezilla/resources/opencrystal/16x16/help.png
+  /usr/share/filezilla/resources/opencrystal/16x16/localtreeview.png
+  /usr/share/filezilla/resources/opencrystal/16x16/lock.png
+  /usr/share/filezilla/resources/opencrystal/16x16/logview.png
+  /usr/share/filezilla/resources/opencrystal/16x16/processqueue.png
+  /usr/share/filezilla/resources/opencrystal/16x16/queueview.png
+  /usr/share/filezilla/resources/opencrystal/16x16/reconnect.png
+  /usr/share/filezilla/resources/opencrystal/16x16/refresh.png
+  /usr/share/filezilla/resources/opencrystal/16x16/remotetreeview.png
+  /usr/share/filezilla/resources/opencrystal/16x16/server.png
+  /usr/share/filezilla/resources/opencrystal/16x16/showhidden.png
+  /usr/share/filezilla/resources/opencrystal/16x16/sitemanager.png
+  /usr/share/filezilla/resources/opencrystal/16x16/speedlimits.png
+  /usr/share/filezilla/resources/opencrystal/16x16/synchronize.png
+  /usr/share/filezilla/resources/opencrystal/16x16/upload.png
+  /usr/share/filezilla/resources/opencrystal/16x16/uploadadd.png
+  /usr/share/filezilla/resources/opencrystal/32x32/ascii.png
+  /usr/share/filezilla/resources/opencrystal/32x32/auto.png
+  /usr/share/filezilla/resources/opencrystal/32x32/binary.png
+  /usr/share/filezilla/resources/opencrystal/32x32/bookmarks.png
+  /usr/share/filezilla/resources/opencrystal/32x32/cancel.png
+  /usr/share/filezilla/resources/opencrystal/32x32/compare.png
+  /usr/share/filezilla/resources/opencrystal/32x32/disconnect.png
+  /usr/share/filezilla/resources/opencrystal/32x32/download.png
+  /usr/share/filezilla/resources/opencrystal/32x32/downloadadd.png
+  /usr/share/filezilla/resources/opencrystal/32x32/file.png
+  /usr/share/filezilla/resources/opencrystal/32x32/filter.png
+  /usr/share/filezilla/resources/opencrystal/32x32/folder.png
+  /usr/share/filezilla/resources/opencrystal/32x32/folderback.png
+  /usr/share/filezilla/resources/opencrystal/32x32/folderclosed.png
+  /usr/share/filezilla/resources/opencrystal/32x32/folderup.png
+  /usr/share/filezilla/resources/opencrystal/32x32/help.png
+  /usr/share/filezilla/resources/opencrystal/32x32/localtreeview.png
+  /usr/share/filezilla/resources/opencrystal/32x32/lock.png
+  /usr/share/filezilla/resources/opencrystal/32x32/logview.png
+  /usr/share/filezilla/resources/opencrystal/32x32/processqueue.png
+  /usr/share/filezilla/resources/opencrystal/32x32/queueview.png
+  /usr/share/filezilla/resources/opencrystal/32x32/reconnect.png
+  /usr/share/filezilla/resources/opencrystal/32x32/refresh.png
+  /usr/share/filezilla/resources/opencrystal/32x32/remotetreeview.png
+  /usr/share/filezilla/resources/opencrystal/32x32/showhidden.png
+  /usr/share/filezilla/resources/opencrystal/32x32/sitemanager.png
+  /usr/share/filezilla/resources/opencrystal/32x32/speedlimits.png
+  /usr/share/filezilla/resources/opencrystal/32x32/synchronize.png
+  /usr/share/filezilla/resources/opencrystal/32x32/upload.png
+  /usr/share/filezilla/resources/opencrystal/32x32/uploadadd.png
+  /usr/share/filezilla/resources/opencrystal/48x48/ascii.png
+  /usr/share/filezilla/resources/opencrystal/48x48/auto.png
+  /usr/share/filezilla/resources/opencrystal/48x48/binary.png
+  /usr/share/filezilla/resources/opencrystal/48x48/bookmarks.png
+  /usr/share/filezilla/resources/opencrystal/48x48/cancel.png
+  /usr/share/filezilla/resources/opencrystal/48x48/compare.png
+  /usr/share/filezilla/resources/opencrystal/48x48/disconnect.png
+  /usr/share/filezilla/resources/opencrystal/48x48/download.png
+  /usr/share/filezilla/resources/opencrystal/48x48/downloadadd.png
+  /usr/share/filezilla/resources/opencrystal/48x48/file.png
+  /usr/share/filezilla/resources/opencrystal/48x48/filter.png
+  /usr/share/filezilla/resources/opencrystal/48x48/folder.png
+  /usr/share/filezilla/resources/opencrystal/48x48/folderback.png
+  /usr/share/filezilla/resources/opencrystal/48x48/folderclosed.png
+  /usr/share/filezilla/resources/opencrystal/48x48/folderup.png
+  /usr/share/filezilla/resources/opencrystal/48x48/help.png
+  /usr/share/filezilla/resources/opencrystal/48x48/localtreeview.png
+  /usr/share/filezilla/resources/opencrystal/48x48/lock.png
+  /usr/share/filezilla/resources/opencrystal/48x48/logview.png
+  /usr/share/filezilla/resources/opencrystal/48x48/processqueue.png
+  /usr/share/filezilla/resources/opencrystal/48x48/queueview.png
+  /usr/share/filezilla/resources/opencrystal/48x48/reconnect.png
+  /usr/share/filezilla/resources/opencrystal/48x48/refresh.png
+  /usr/share/filezilla/resources/opencrystal/48x48/remotetreeview.png
+  /usr/share/filezilla/resources/opencrystal/48x48/showhidden.png
+  /usr/share/filezilla/resources/opencrystal/48x48/sitemanager.png
+  /usr/share/filezilla/resources/opencrystal/48x48/speedlimits.png
+  /usr/share/filezilla/resources/opencrystal/48x48/synchronize.png
+  /usr/share/filezilla/resources/opencrystal/48x48/upload.png
+  /usr/share/filezilla/resources/opencrystal/48x48/uploadadd.png
+  /usr/share/filezilla/resources/opencrystal/theme.xml
   /usr/share/filezilla/resources/quickconnectbar.xrc
   /usr/share/filezilla/resources/theme.xml
   /usr/share/filezilla/resources/toolbar.xrc
   /usr/share/filezilla/resources/up.png
+  /usr/share/icons/hicolor/16x16/apps/filezilla.png
+  /usr/share/icons/hicolor/32x32/apps/filezilla.png
+  /usr/share/icons/hicolor/48x48/apps/filezilla.png
   /usr/share/locale/ar/LC_MESSAGES/filezilla.mo
   /usr/share/locale/bg_BG/LC_MESSAGES/filezilla.mo
   /usr/share/locale/ca/LC_MESSAGES/filezilla.mo
@@ -266,6 +455,7 @@ Files included in the binary package:
   /usr/share/locale/zh_CN/LC_MESSAGES/filezilla.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/filezilla.mo
   /usr/share/man/man1/filezilla.1.gz
+  /usr/share/man/man1/fzputtygen.1.gz
   /usr/share/man/man1/fzsftp.1.gz
   /usr/share/man/man5/fzdefaults.xml.5.gz
   /usr/share/pixmaps/filezilla.png
@@ -273,6 +463,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 3.1.1.1-1 -----
+Version bump.
 
 ----- version 3.0.11.1-1 -----
 Version bump.

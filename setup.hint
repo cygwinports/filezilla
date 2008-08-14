@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: cygwin libgnutls26 wx28-base wx28-gtk2
+requires: cygwin libgetaddrinfo0 libgnutls26 libidn11 wx28-base wx28-gtk2
 sdesc: "wxGTK FTP/FTPS/SFTP client"
 ldesc: "FileZilla Client is a fast and reliable cross-platform FTP, FTPS 
 and SFTP client with lots of useful features and an intuitive 
