@@ -1,65 +1,65 @@
---- origsrc/filezilla-3.1.1.1/src/engine/ftpcontrolsocket.cpp	2008-08-11 09:29:03.000000000 -0500
-+++ src/filezilla-3.1.1.1/src/engine/ftpcontrolsocket.cpp	2008-08-13 22:11:06.736150800 -0500
-@@ -3692,7 +3692,9 @@
+--- origsrc/filezilla-3.1.3/src/engine/ftpcontrolsocket.cpp	2008-09-21 08:51:06.000000000 -0500
++++ src/filezilla-3.1.3/src/engine/ftpcontrolsocket.cpp	2008-09-21 17:04:58.013494300 -0500
+@@ -3713,7 +3713,9 @@
  {
  	// Local IP should work. Only a complete moron would use IPv6
  	// and NAT at the same time.
 +#ifdef AF_INET6
- 	if (GetAddressFamily() != AF_INET6)
+ 	if (m_pSocket->GetAddressFamily() != AF_INET6)
 +#endif
  	{
  		int mode = m_pEngine->GetOptions()->GetOptionVal(OPTION_EXTERNALIPMODE);
  
-@@ -3888,9 +3890,11 @@
+@@ -3909,9 +3911,11 @@
  		if (pData->bPasv)
  		{
  			bool parsed;
 +#ifdef AF_INET6
- 			if (GetAddressFamily() == AF_INET6)
+ 			if (m_pSocket->GetAddressFamily() == AF_INET6)
  				parsed = ParseEpsvResponse(pData);
  			else
 +#endif
  				parsed = ParsePasvResponse(pData);
  			if (!parsed)
  			{
-@@ -4021,9 +4025,11 @@
+@@ -4042,9 +4046,11 @@
  		if (pData->bPasv)
  		{
  			pData->bTriedPasv = true;
 +#ifdef AF_INET6
- 			if (GetAddressFamily() == AF_INET6)
+ 			if (m_pSocket->GetAddressFamily() == AF_INET6)
  				cmd = _T("EPSV");
  			else
 +#endif
  				cmd = _T("PASV");
  		}
  		else
-@@ -4038,9 +4044,11 @@
+@@ -4059,9 +4065,11 @@
  				if (portArgument != _T(""))
  				{
  					pData->bTriedActive = true;
 +#ifdef AF_INET6
- 					if (GetAddressFamily() == AF_INET6)
+ 					if (m_pSocket->GetAddressFamily() == AF_INET6)
  						cmd = _T("EPRT " + portArgument);
  					else
 +#endif
  						cmd = _T("PORT " + portArgument);
  					break;
  				}
-@@ -4056,9 +4064,11 @@
+@@ -4077,9 +4085,11 @@
  			pData->bTriedActive = true;
  			pData->bTriedPasv = true;
  			pData->bPasv = true;
 +#ifdef AF_INET6
- 			if (GetAddressFamily() == AF_INET6)
+ 			if (m_pSocket->GetAddressFamily() == AF_INET6)
  				cmd = _T("EPSV");
  			else
 +#endif
  				cmd = _T("PASV");
  		}
  		break;
---- origsrc/filezilla-3.1.1.1/src/engine/misc.cpp	2008-08-11 09:29:03.000000000 -0500
-+++ src/filezilla-3.1.1.1/src/engine/misc.cpp	2008-08-13 22:12:46.658025800 -0500
+--- origsrc/filezilla-3.1.3/src/engine/misc.cpp	2008-09-21 08:51:06.000000000 -0500
++++ src/filezilla-3.1.3/src/engine/misc.cpp	2008-09-21 17:03:33.512953500 -0500
 @@ -172,6 +172,7 @@
  
  bool IsRoutableAddress(const wxString& address, int family)
@@ -68,7 +68,7 @@
  	if (family == AF_INET6)
  	{
  		wxString long_address = GetIPV6LongForm(address);
-@@ -227,6 +228,7 @@
+@@ -225,6 +226,7 @@
  		return true;
  	}
  	else
@@ -76,8 +76,8 @@
  	{
  		// Assumes address is already a valid IP address
  		if (address.Left(3) == _T("127") ||
---- origsrc/filezilla-3.1.1.1/src/engine/socket.cpp	2008-08-11 09:29:03.000000000 -0500
-+++ src/filezilla-3.1.1.1/src/engine/socket.cpp	2008-08-13 22:29:44.869095800 -0500
+--- origsrc/filezilla-3.1.3/src/engine/socket.cpp	2008-09-21 08:51:06.000000000 -0500
++++ src/filezilla-3.1.3/src/engine/socket.cpp	2008-09-21 17:03:33.528578600 -0500
 @@ -24,6 +24,9 @@
    #include <netinet/in.h>
    #include <netinet/tcp.h>
@@ -88,7 +88,7 @@
  
  // Fixups needed on FreeBSD
  #if !defined(EAI_ADDRFAMILY) && defined(EAI_FAMILY)
-@@ -1328,8 +1331,10 @@
+@@ -1483,8 +1486,10 @@
  
  	// IPv6 uses colons as separator, need to enclose address
  	// to avoid ambiguity if also showing port
@@ -99,7 +99,7 @@
  
  	if (with_port)
  		return host + _T(":") + port;
-@@ -1500,11 +1505,13 @@
+@@ -1655,11 +1660,13 @@
  		struct sockaddr_in* addr_v4 = (sockaddr_in*)&addr;
  		return ntohs(addr_v4->sin_port);
  	}
@@ -113,7 +113,7 @@
  
  	error = EINVAL;
  	return -1;
-@@ -1528,11 +1535,13 @@
+@@ -1683,11 +1690,13 @@
  		struct sockaddr_in* addr_v4 = (sockaddr_in*)&addr;
  		return ntohs(addr_v4->sin_port);
  	}
@@ -127,8 +127,8 @@
  
  	error = EINVAL;
  	return -1;
---- origsrc/filezilla-3.1.1.1/src/engine/transfersocket.cpp	2008-08-11 09:29:03.000000000 -0500
-+++ src/filezilla-3.1.1.1/src/engine/transfersocket.cpp	2008-08-13 22:30:25.697220800 -0500
+--- origsrc/filezilla-3.1.3/src/engine/transfersocket.cpp	2008-09-21 08:51:06.000000000 -0500
++++ src/filezilla-3.1.3/src/engine/transfersocket.cpp	2008-09-21 17:03:33.528578600 -0500
 @@ -113,11 +113,13 @@
  	}
  
