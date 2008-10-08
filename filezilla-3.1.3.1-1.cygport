@@ -7,8 +7,8 @@ SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
 PATCH_URI="
 	3.0.11.1-wxEvent.patch
 	3.0.11.1-binreloc.patch
-	3.1.3-d_type.patch
 	3.1.3-ipv6.patch
+	3.1.3-ansi.patch
 "
 
 SRC_DIR="${P/_/-}"

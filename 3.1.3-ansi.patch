@@ -1,0 +1,11 @@
+--- origsrc/filezilla-3.1.3.1/src/engine/local_filesys.cpp	2008-09-29 08:24:52.000000000 -0500
++++ src/filezilla-3.1.3.1/src/engine/local_filesys.cpp	2008-10-08 02:51:51.420430400 -0500
+@@ -245,7 +245,7 @@
+ 		return GetFileInfo(tmp, isLink, size, modificationTime, mode);
+ 	}
+ 
+-	const wxCharBuffer p = path.fn_str();
++	const char *p = path.fn_str();
+ 	return GetFileInfo(p, isLink, size, modificationTime, mode);
+ #endif
+ }
