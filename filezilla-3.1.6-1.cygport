@@ -14,4 +14,4 @@ SRC_DIR="${P/_/-}"
 
 CYGCONF_ARGS+=" WXRC=/usr/bin/wxrc-${WX_VERSION}"
 # cannot be added to LIBS during configure due to false positive HAVE_GETADDRINFO
-MAKEOPTS+=" LIBS=-lgetaddrinfo"
+MAKEOPTS+=" IDN_LIB='/usr/lib/libgetaddrinfo.a -lidn'"

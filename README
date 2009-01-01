@@ -5,22 +5,23 @@ SFTP client with lots of useful features and an intuitive interface.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libgetaddrinfo0-1.6.3-3
   libgnutls26-2.4.1-1
   libidn11-1.7-1
+  libintl8-0.17-2
   wx28-base-2.8.9.1-1
   wx28-gtk2-2.8.9.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-1
-  automake1.10-1.10.1-1
+  automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   gettext-devel-0.17-2
+  libgetaddrinfo-devel-1.6.3-3
   libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
@@ -35,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack filezilla-3.1.5-X-src.tar.bz2
+  unpack filezilla-3.1.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./filezilla-3.1.5-X.cygport all
+  cygport ./filezilla-3.1.6-X.cygport all
 
 This will create:
-  /usr/src/filezilla-3.1.5-X-src.tar.bz2
-  /usr/src/filezilla-3.1.5-X.tar.bz2
+  /usr/src/filezilla-3.1.6-X-src.tar.bz2
+  /usr/src/filezilla-3.1.6-X.tar.bz2
 
 -------------------------------------------
 
@@ -54,12 +55,12 @@ Files included in the binary package:
   /usr/bin/fzputtygen.exe
   /usr/bin/fzsftp.exe
   /usr/share/applications/filezilla.desktop
-  /usr/share/doc/filezilla-3.1.5/AUTHORS
-  /usr/share/doc/filezilla-3.1.5/COPYING
-  /usr/share/doc/filezilla-3.1.5/ChangeLog
-  /usr/share/doc/filezilla-3.1.5/INSTALL
-  /usr/share/doc/filezilla-3.1.5/NEWS
-  /usr/share/doc/filezilla-3.1.5/README
+  /usr/share/doc/filezilla-3.1.6/AUTHORS
+  /usr/share/doc/filezilla-3.1.6/COPYING
+  /usr/share/doc/filezilla-3.1.6/ChangeLog
+  /usr/share/doc/filezilla-3.1.6/INSTALL
+  /usr/share/doc/filezilla-3.1.6/NEWS
+  /usr/share/doc/filezilla-3.1.6/README
   /usr/share/filezilla/docs/fzdefaults.xml.example
   /usr/share/filezilla/resources/16x16/ascii.png
   /usr/share/filezilla/resources/16x16/auto.png
@@ -464,6 +465,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 3.1.6-1 -----
+Version bump.
 
 ----- version 3.1.5-1 -----
 Version bump.
