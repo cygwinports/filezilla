@@ -5,7 +5,7 @@ DESCRIPTION="FileZilla FTP/FTPS/SFTP client"
 HOMEPAGE="http://filezilla-project.org/"
 SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
 PATCH_URI="
-	3.0.11.1-wxEvent.patch
+	3.2.0-wxEvent.patch
 	3.0.11.1-binreloc.patch
 	3.1.3-ipv6.patch
 "
@@ -13,5 +13,3 @@ PATCH_URI="
 SRC_DIR="${P/_/-}"
 
 CYGCONF_ARGS+=" WXRC=/usr/bin/wxrc-${WX_VERSION}"
-# cannot be added to LIBS during configure due to false positive HAVE_GETADDRINFO
-MAKEOPTS+=" IDN_LIB='/usr/lib/libgetaddrinfo.a -lidn'"

@@ -5,8 +5,9 @@ SFTP client with lots of useful features and an intuitive interface.
 
 Runtime requirements:
   cygwin-1.5.25-15
+  libdbus1_3-1.2.4-1
   libgnutls26-2.4.1-1
-  libidn11-1.7-1
+  libidn11-1.8-1
   libintl8-0.17-2
   wx28-base-2.8.9.1-1
   wx28-gtk2-2.8.9.1-1
@@ -21,7 +22,6 @@ Build requirements:
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   gettext-devel-0.17-2
-  libgetaddrinfo-devel-1.6.3-3
   libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack filezilla-3.1.6-X-src.tar.bz2
+  unpack filezilla-3.2.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./filezilla-3.1.6-X.cygport all
+  cygport ./filezilla-3.2.0-X.cygport all
 
 This will create:
-  /usr/src/filezilla-3.1.6-X-src.tar.bz2
-  /usr/src/filezilla-3.1.6-X.tar.bz2
+  /usr/src/filezilla-3.2.0-X-src.tar.bz2
+  /usr/src/filezilla-3.2.0-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,16 +55,17 @@ Files included in the binary package:
   /usr/bin/fzputtygen.exe
   /usr/bin/fzsftp.exe
   /usr/share/applications/filezilla.desktop
-  /usr/share/doc/filezilla-3.1.6/AUTHORS
-  /usr/share/doc/filezilla-3.1.6/COPYING
-  /usr/share/doc/filezilla-3.1.6/ChangeLog
-  /usr/share/doc/filezilla-3.1.6/INSTALL
-  /usr/share/doc/filezilla-3.1.6/NEWS
-  /usr/share/doc/filezilla-3.1.6/README
+  /usr/share/doc/filezilla-3.2.0/AUTHORS
+  /usr/share/doc/filezilla-3.2.0/COPYING
+  /usr/share/doc/filezilla-3.2.0/ChangeLog
+  /usr/share/doc/filezilla-3.2.0/INSTALL
+  /usr/share/doc/filezilla-3.2.0/NEWS
+  /usr/share/doc/filezilla-3.2.0/README
   /usr/share/filezilla/docs/fzdefaults.xml.example
   /usr/share/filezilla/resources/16x16/ascii.png
   /usr/share/filezilla/resources/16x16/auto.png
   /usr/share/filezilla/resources/16x16/binary.png
+  /usr/share/filezilla/resources/16x16/bookmark.png
   /usr/share/filezilla/resources/16x16/cancel.png
   /usr/share/filezilla/resources/16x16/compare.png
   /usr/share/filezilla/resources/16x16/disconnect.png
@@ -442,6 +443,7 @@ Files included in the binary package:
   /usr/share/locale/nb_NO/LC_MESSAGES/filezilla.mo
   /usr/share/locale/ne/LC_MESSAGES/filezilla.mo
   /usr/share/locale/nl/LC_MESSAGES/filezilla.mo
+  /usr/share/locale/nn_NO/LC_MESSAGES/filezilla.mo
   /usr/share/locale/pl_PL/LC_MESSAGES/filezilla.mo
   /usr/share/locale/pt_BR/LC_MESSAGES/filezilla.mo
   /usr/share/locale/pt_PT/LC_MESSAGES/filezilla.mo
@@ -465,6 +467,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 3.2.0-1 -----
+Version bump.
 
 ----- version 3.1.6-1 -----
 Version bump.

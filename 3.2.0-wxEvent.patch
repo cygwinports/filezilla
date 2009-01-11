@@ -1,3 +1,18 @@
+--- origsrc/filezilla-3.2.0/src/dbus/wxdbusconnection.h	2009-01-07 11:28:35.000000000 -0600
++++ src/filezilla-3.2.0/src/dbus/wxdbusconnection.h	2009-01-11 02:55:16.031487800 -0600
+@@ -100,9 +100,9 @@ void MainFrame::OnSignal(wxDBusConnectio
+ */
+ 
+ BEGIN_DECLARE_EVENT_TYPES()
+-	DECLARE_EVENT_TYPE(wxEVT_DBUS_NOTIFICATION, wxID_ANY)
+-	DECLARE_EVENT_TYPE(wxEVT_DBUS_SIGNAL,wxID_ANY)
+-	DECLARE_EVENT_TYPE(wxEVT_DBUS_ASYNC_RESPONSE, wxID_ANY)
++	DECLARE_LOCAL_EVENT_TYPE(wxEVT_DBUS_NOTIFICATION, wxID_ANY)
++	DECLARE_LOCAL_EVENT_TYPE(wxEVT_DBUS_SIGNAL,wxID_ANY)
++	DECLARE_LOCAL_EVENT_TYPE(wxEVT_DBUS_ASYNC_RESPONSE, wxID_ANY)
+ END_DECLARE_EVENT_TYPES()
+ 
+ #define EVT_DBUS_NOTIFICATION(id, fn) DECLARE_EVENT_TABLE_ENTRY(wxEVT_DBUS_NOTIFICATION, id, -1, (wxObjectEventFunction) (wxEventFunction)  (wxDBusConnectionEventFunction) & fn, (wxObject *) NULL ),
 --- origsrc/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-05 09:09:38.000000000 -0500
 +++ src/filezilla-3.0.11.1/src/interface/commandqueue.h	2008-07-16 21:37:15.796875000 -0500
 @@ -5,7 +5,7 @@
