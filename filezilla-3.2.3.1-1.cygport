@@ -7,9 +7,8 @@ SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
 PATCH_URI="
 	3.2.0-wxEvent.patch
 	3.0.11.1-binreloc.patch
-	3.1.3-ipv6.patch
 "
 
 SRC_DIR="${P/_/-}"
 
-CYGCONF_ARGS+=" WXRC=/usr/bin/wxrc-${WX_VERSION}"
+CYGCONF_ARGS+=" --with-wx-config=${WX_CONFIG} WXRC=/usr/bin/wxrc-${WX_VERSION}"
