@@ -4,8 +4,8 @@ FileZilla Client is a fast and reliable cross-platform FTP, FTPS and
 SFTP client with lots of useful features and an intuitive interface.
 
 Runtime requirements:
-  cygwin-1.7.0-49
-  libdbus1_3-1.2.14-1
+  cygwin-1.7.0-51
+  libdbus1_3-1.2.16-1
   libgcc1-4.3.2-2
   libgnutls26-2.4.1-1
   libidn11-1.9-1
@@ -19,12 +19,12 @@ Build requirements:
   autoconf2.5-2.63-10
   automake1.10-1.10.2-10
   binutils-20080624-2
-  cygport-0.9.6-1
+  cygport-0.9.8-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gcc4-g++-4.3.2-2
   gettext-devel-0.17-11
-  libtool-2.2.7a-13
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
