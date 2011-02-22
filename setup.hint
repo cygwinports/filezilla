@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: libdbus1_3 libgcc1 libgnutls26 libidn11 libintl8 libstdc++6 libwx_baseu2.8_0 libwx_gtk2u2.8_0
+requires: libdbus1_3 libgcc1 libgnutls26 libidn11 libstdc++6 libwx_baseu2.8_0 libwx_gtk2u2.8_0
 sdesc: "wxGTK FTP/FTPS/SFTP client"
 ldesc: "FileZilla Client is a fast and reliable cross-platform FTP, FTPS 
 and SFTP client with lots of useful features and an intuitive 
