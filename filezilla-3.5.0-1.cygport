@@ -4,10 +4,7 @@ inherit wxwidgets
 DESCRIPTION="FileZilla FTP/FTPS/SFTP client"
 HOMEPAGE="http://filezilla-project.org/"
 SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
-PATCH_URI="
-	3.2.0-wxEvent.patch
-	3.0.11.1-binreloc.patch
-"
+PATCH_URI="3.0.11.1-binreloc.patch"
 
 SRC_DIR="${P/_/-}"
 
