@@ -2,16 +2,14 @@ WX_VERSION=2.8
 inherit wxwidgets
 
 NAME="filezilla"
-VERSION=3.5.3
-RELEASE=2
+VERSION=3.7.1.1
+RELEASE=1
 CATEGORY="Net"
 SUMMARY="Graphical FTP/FTPS/SFTP client"
 DESCRIPTION="FileZilla Client is a fast and reliable cross-platform FTP, FTPS
 and SFTP client with lots of useful features and an intuitive interface."
 HOMEPAGE="http://filezilla-project.org/"
-SRC_URI="mirror://sourceforge/${PN}/FileZilla_${PV/_/-}_src.tar.bz2"
+SRC_URI="mirror://sourceforge/filezilla/FileZilla_${VERSION}_src.tar.bz2"
 PATCH_URI="3.0.11.1-binreloc.patch"
-
-SRC_DIR="${P/_/-}"
 
 CYGCONF_ARGS+=" --with-wx-config=${WX_CONFIG} WXRC=/usr/bin/wxrc-${WX_VERSION}"
