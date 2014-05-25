@@ -12,4 +12,8 @@ HOMEPAGE="http://filezilla-project.org/"
 SRC_URI="mirror://sourceforge/filezilla/FileZilla_${VERSION}_src.tar.bz2"
 PATCH_URI="3.0.11.1-binreloc.patch"
 
-CYGCONF_ARGS+=" --with-wx-config=${WX_CONFIG} WXRC=/usr/bin/wxrc-${WX_VERSION}"
+CYGCONF_ARGS+="
+	--with-wx-config=${WX_CONFIG}
+	WXRC=/usr/bin/wxrc-${WX_VERSION}
+	--disable-autoupdatecheck
+"
