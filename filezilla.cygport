@@ -2,7 +2,7 @@ WX_VERSION=3.0
 inherit wxwidgets
 
 NAME="filezilla"
-VERSION=3.10.2
+VERSION=3.10.3
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Graphical FTP/FTPS/SFTP client"
@@ -10,10 +10,14 @@ DESCRIPTION="FileZilla Client is a fast and reliable cross-platform FTP, FTPS
 and SFTP client with lots of useful features and an intuitive interface."
 HOMEPAGE="http://filezilla-project.org/"
 SRC_URI="mirror://sourceforge/filezilla/FileZilla_${VERSION}_src.tar.bz2"
-PATCH_URI="3.0.11.1-binreloc.patch"
+PATCH_URI="
+	3.0.11.1-binreloc.patch
+	3.10.3-cygwin-configure.patch
+"
 
 CYGCONF_ARGS+="
 	--with-wx-config=${WX_CONFIG}
 	WXRC=/usr/bin/wxrc-${WX_VERSION}
 	--disable-autoupdatecheck
+	--with-tinyxml=builtin
 "
