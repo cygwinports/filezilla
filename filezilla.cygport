@@ -2,7 +2,7 @@ WX_VERSION=3.0
 inherit wxwidgets
 
 NAME="filezilla"
-VERSION=3.12.0.2
+VERSION=3.14.1
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Graphical FTP/FTPS/SFTP client"
@@ -11,7 +11,6 @@ and SFTP client with lots of useful features and an intuitive interface."
 HOMEPAGE="http://filezilla-project.org/"
 SRC_URI="mirror://sourceforge/filezilla/FileZilla_${VERSION}_src.tar.bz2"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/filezilla.git/plain/filezilla-gnutls-system.patch
 	3.0.11.1-binreloc.patch
 	3.10.3-cygwin-configure.patch
 "
@@ -23,5 +22,6 @@ CYGCONF_ARGS+="
 	WXRC=/usr/bin/wxrc-${WX_VERSION}
 	--disable-autoupdatecheck
 	--disable-manualupdatecheck
-	--with-tinyxml=builtin
+	--enable-gnutlssystemciphers
+	--with-pugixml=system
 "

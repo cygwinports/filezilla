@@ -36,14 +36,3 @@
      use_binreloc=no
    else
      use_binreloc=yes
---- origsrc/filezilla-3.10.3/m4/fz_check_tinyxml.m4	2014-06-20 12:47:38.000000000 -0500
-+++ src/filezilla-3.10.3/m4/fz_check_tinyxml.m4	2015-04-29 19:13:12.884956700 -0500
-@@ -12,7 +12,7 @@ AC_DEFUN([FZ_CHECK_TINYXML], [
-       fi
-     ],
-     [
--      if echo $host_os | grep -i "cygwin\|mingw\|mac\|apple" > /dev/null 2>&1 ; then
-+      if echo $host_os | grep -i "mingw\|mac\|apple" > /dev/null 2>&1 ; then
-         with_tinyxml=auto
-       else
-         with_tinyxml=system
