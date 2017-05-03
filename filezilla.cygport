@@ -2,7 +2,7 @@ WX_VERSION=3.0
 inherit wxwidgets
 
 NAME="filezilla"
-VERSION=3.14.1
+VERSION=3.25.2
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Graphical FTP/FTPS/SFTP client"
